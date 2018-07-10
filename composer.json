@@ -1,0 +1,23 @@
+{
+  "name": "techshark/laritio",
+  "description": "Laravel package for Publit.io PHP SDK.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1",
+    "laravel/laravel": "5.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "TechShark\\Laritio\\": "src/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
