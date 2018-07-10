@@ -131,7 +131,7 @@ class LaritioSDK
     {
         $arguments['api_nonce'] = str_pad(random_int(0, 99999999), 8, STR_PAD_LEFT);
         $arguments['api_timestamp'] = time();
-        $arguments['api_key'] = $this->_key;
+        $arguments['api_key'] = $this->laritioManager->getPublicKey();
 
         if (!array_key_exists('api_format', $arguments)) {
             // Use the serialised PHP format,
@@ -140,10 +140,10 @@ class LaritioSDK
         }
 
         // Add API kit version
-        $arguments['api_kit'] = 'php-' . $this->_version;
+        $arguments['api_kit'] = 'php-' . $this->laritioManager->getVersion();
 
         // Sign the array of arguments
-        //$arguments['api_signature'] = $this->_sign($arguments);
+        //$arguments['api_signature'] = $this->sign($arguments);
         $arguments['api_signature'] = sha1($arguments['api_timestamp'] . $arguments['api_nonce'] . $this->laritioManager->getPrivateKey());
 
         return $arguments;
