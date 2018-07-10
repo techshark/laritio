@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace TechShark\Laritio\Providers;
 
 use Illuminate\Contracts\Config\Repository;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use TechShark\Laritio\Managers\LaritioManager;
 
@@ -36,7 +37,9 @@ class LaritioServiceProvider extends ServiceProvider
     {
         $this->app->singleton(
             LaritioManager::class,
-            function (Repository $config) {
+            function (Application $application) {
+                $config = $application->make(Repository::class);
+
                 $laritioManager = new LaritioManager();
                 $laritioManager->setVersion(
                     $config->get('laritio.laritio_api_version')
