@@ -11,7 +11,7 @@ use TechShark\Laritio\SDK\Requests\Interfaces\LaritioSDKFileRequestInterface;
  * @author Tyler Brennan < info@techshark.nl >
  * @version 1.0
  */
-class LaritioSDKFileRequests implements LaritioSDKFileRequestInterface
+class LaritioSDKFileRequest implements LaritioSDKFileRequestInterface
 {
     /**
      * @var string
