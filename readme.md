@@ -9,6 +9,7 @@ Laravel package for Publit.io PHP SDK.
 You're all done!
 
 #Usage
+
 **File upload**
 ```php
 $laritioSDKFileRequest = new LaritioSDKFileRequest(
