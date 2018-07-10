@@ -70,7 +70,7 @@ class LaritioSDKFileWatermarkRequest implements LaritioSDKFileRequestInterface
      * Should return one of the following actions:
      * > file
      * > watermark
-     * The default action will always be "file".
+     * The default action will always be "watermark".
      *
      * no other actions are supported as of this moment.
      *
