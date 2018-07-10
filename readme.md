@@ -8,7 +8,7 @@ Laravel package for Publit.io PHP SDK.
 
 You're all done!
 
-#Usage
+# Usage
 
 **File upload**
 ```php
