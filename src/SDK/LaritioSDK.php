@@ -117,7 +117,7 @@ class LaritioSDK
      */
     private function buildUrl(string $endpoint, array $args = []): string
     {
-        return $this->laritioManager->getEndpoint() . $endpoint . '?' . http_build_query($this->buildArguments($args), '', '&');
+        return $this->laritioManager->getEndpoint() . 'v' . $this->laritioManager->getVersion() . $endpoint . '?' . http_build_query($this->buildArguments($args), '', '&');
     }
 
     /**
