@@ -129,7 +129,7 @@ class LaritioSDK
      */
     private function buildArguments(array $arguments): array
     {
-        $arguments['api_nonce'] = str_pad(random_int(0, 99999999), 8, STR_PAD_LEFT);
+        $arguments['api_nonce'] = str_pad((string) random_int(0, 99999999), 8, STR_PAD_LEFT);
         $arguments['api_timestamp'] = time();
         $arguments['api_key'] = $this->laritioManager->getPublicKey();
 
