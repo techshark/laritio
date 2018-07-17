@@ -33,7 +33,7 @@ class LaritioSDKRequest implements LaritioSDKRequestInterface
      * @param array $arguments
      * @param string $httpMethod
      */
-    public function __construct(string $endpoint, array $arguments, string $httpMethod = 'GET')
+    public function __construct(string $endpoint, array $arguments = [], string $httpMethod = 'GET')
     {
         $this->endpoint = $endpoint;
         $this->arguments = $arguments;
