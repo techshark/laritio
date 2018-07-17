@@ -33,7 +33,7 @@ class LaritioSDKFileWatermarkRequest implements LaritioSDKFileRequestInterface
      * @param array $arguments
      * @param string $action
      */
-    public function __construct(string $filePath, array $arguments, string $action = 'watermark')
+    public function __construct(string $filePath, array $arguments = [], string $action = 'watermark')
     {
         $this->filePath = $filePath;
         $this->arguments = $arguments;

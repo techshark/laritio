@@ -33,7 +33,7 @@ class LaritioSDKFileRequest implements LaritioSDKFileRequestInterface
      * @param array $arguments
      * @param string $action
      */
-    public function __construct(string $filePath, array $arguments, string $action = 'file')
+    public function __construct(string $filePath, array $arguments = [], string $action = 'file')
     {
         $this->filePath = $filePath;
         $this->action = $action;
