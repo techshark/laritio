@@ -129,7 +129,7 @@ class LaritioSDK
      */
     private function buildArguments(array $arguments): array
     {
-        $arguments['api_nonce'] = str_pad((string) random_int(0, 99999999), 8);
+        $arguments['api_nonce'] = str_pad((string) random_int(0, 99999999), 8, '', STR_PAD_LEFT);
         $arguments['api_timestamp'] = time();
         $arguments['api_key'] = $this->laritioManager->getPublicKey();
 
@@ -188,7 +188,7 @@ class LaritioSDK
         if (is_array($input)) {
             $response = array_map(array('_urlencode'), $input);
         } else if (is_scalar($input)) {
-            $response = str_replace('+', ' ', str_replace('%7E', '~', rawurlencode($input)));
+            $response = str_replace(array('%7E', '+'), array('~', ' '), rawurlencode($input));
         }
 
         return $response;
