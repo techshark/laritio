@@ -16,9 +16,9 @@ return [
      * Which version of the publit.io API the SDK should communitcate
      * with.
      *
-     * Default: 1.0
+     * Default: 1
      */
-    'laritio_api_version' => env('LARITIO_API_VERSION', '1.0'),
+    'laritio_api_version' => env('LARITIO_API_VERSION', '1'),
 
     /**
      * Public API Key to be used by the SDK to authenticate
